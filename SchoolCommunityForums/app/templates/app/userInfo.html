@@ -1,0 +1,82 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+
+<div class="product-details-wrap" style="width:150%">
+
+
+    <div class="col-lg-12 col-md-12">
+
+        <div class="blog-details-wrap">
+            <h1>个人信息</h1>
+
+            <div class="row">
+
+            <div class="comment-reply-box mt-75">
+                <form action="/userInfo" method="post" class="comment-form">
+                    {% csrf_token %}
+
+                    <div class="col-md-12">
+                        用户名:<input type="text"  name="UserName" readonly value="{{users.UserName}}" style="width: 500% " class="form-control" placeholder="用户名*">
+                    </div>
+                    <div class="col-md-12">
+                        姓名:<input type="text"    name="Name" value="{{users.Name}}" style="width: 500% " class="form-control" placeholder="姓名*">
+                    </div>
+                    <div class="col-md-12">
+                        电话：<input type="text"   name="Phone" value="{{users.Phone}}" style="width: 500% " class="form-control" placeholder="电话*">
+                    </div>
+                    <div class="col-md-12">
+                        身份证：<input type="text" name="Card" value="{{users.Card}}" style="width: 500% " placeholder="身份证*">
+                    </div>
+                    <div class="col-md-12">
+                        班级：<input type="text"   name="StudentClass" value="{{users.StudentClass}}" style="width: 500% " placeholder="班级*">
+                    </div>
+                    <div class="col-md-12">
+                        地址：<input type="text"   name="Address" value="{{users.Address}}" style="width: 500% " placeholder="地址*">
+                    </div>
+
+                    <button class="btn">提交修改</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,207 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/front/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/front/css/animate.min.css">
+    <link rel="stylesheet" href="../static/front/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/front/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../static/front/css/aos.css">
+    <link rel="stylesheet" href="../static/front/css/flaticon.css">
+    <link rel="stylesheet" href="../static/front/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../static/front/css/nice-select.css">
+    <link rel="stylesheet" href="../static/front/css/meanmenu.css">
+    <link rel="stylesheet" href="../static/front/css/slick.css">
+    <link rel="stylesheet" href="../static/front/css/default.css">
+    <link rel="stylesheet" href="../static/front/css/style.css">
+    <link rel="stylesheet" href="../static/front/css/responsive.css">
+
+    <script src="../../static/app/scripts/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+
+<!-- 加载 -->
+<div id="preloader">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_one"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_three"></div>
+        </div>
+    </div>
+</div>
+<!-- 加载 -->
+<!-- 头区域-->
+<header>
+    <div id="header-sticky" class="menu-area transparent-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="logo">
+                        <a href="index.html">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-6 col-sm-6 text-right">
+                    <div class="main-menu s-main-menu d-none d-lg-inline-block">
+                        <nav id="mobile-menu">
+                            <ul>
+                                <li>
+                                    <a  href="{% url 'index' %}">系统首页</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'userInfo' %}">个人信息</a>
+                                </li>
+
+                                <li>
+                                    <a href="{% url 'myGoods' %}">发布项目</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'myCommunityForums' %}">发布帖子</a>
+                                </li>
+                                {% if request.session.userType  == None %}
+                                    <li>
+                                        <a href="{% url 'login' %}">系统登录</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'register' %}">系统注册</a>
+                                    </li>
+
+                                {% else %}
+
+                                    <li>
+                                        <a href="{% url 'logout' %}">退出系统</a>
+                                    </li>
+
+                                {% endif %}
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mobile-menu"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- 头区域 -->
+
+<!-- 主区域 -->
+<main>
+
+    <!-- 搜索区域 -->
+    <section class="breadcrumb-area d-flex align-items-center" data-background="{% static 'front/img/icon/top_head.jpeg' %}">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb-wrap text-center">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-8 col-lg-10">
+                                <div class="slider-search-form">
+                                    <form action="/schoolNewSeach" method="post">
+                                        {% csrf_token %}
+
+                                        <input type="text" style="width:540px" name="keywords" placeholder="请输入搜索项目...">
+
+                                        <button type="submit">开始搜索</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 搜索区域 -->
+
+
+    <!-- 左边导航 -->
+    <section class="product-details gray-bg pt-120 pb-120">
+        <div class="container">
+            <div class="t-product-wrap">
+                <div class="row" style="margin-left:-380px">
+
+
+                    <div class="col-lg-3">
+                        <aside class="vendor-profile-sidebar item-details-sidebar">
+                            <h5 class="vendor-wrap-title">左边导航功能</h5>
+                            <div class="item-sidebar-action text-center">
+                                <div class="item-sidebar-btn mb-25">
+                                    <a href="{% url 'index' %}" class="btn">系统首页</a>
+                                </div>
+
+
+                                <div class="item-sidebar-btn mb-25">
+                                    <a href="{% url 'schoolNew' %}" class="btn item-prev-btn">项目资讯</a>
+                                </div>
+
+                                <div class="item-sidebar-btn mb-25">
+                                    <a href="{% url 'communityForums' %}" class="btn item-sidebar-btn">项目论坛</a>
+                                </div>
+
+                                <div class="item-sidebar-btn mb-25">
+                                    <a href="{% url 'goods' %}" class="btn">项目中心</a>
+                                </div>
+
+
+                            </div>
+
+                        </aside>
+                    </div>
+
+                    <div class="col-lg-9">
+
+                        {% block content %}{% endblock %}
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 左边导航 -->
+
+
+</main>
+<!-- 主区域 -->
+
+
+<!-- 脚步 -->
+<!-- JS -->
+<script src="../static/front/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="../static/front/js/popper.min.js"></script>
+<script src="../static/front/js/bootstrap.min.js"></script>
+<script src="../static/front/js/isotope.pkgd.min.js"></script>
+<script src="../static/front/js/slick.min.js"></script>
+<script src="../static/front/js/jquery.meanmenu.min.js"></script>
+<script src="../static/front/js/ajax-form.js"></script>
+<script src="../static/front/js/wow.min.js"></script>
+<script src="../static/front/js/aos.js"></script>
+<script src="../static/front/js/jquery-ui.min.js"></script>
+<script src="../static/front/js/jquery.counterup.min.js"></script>
+<script src="../static/front/js/jquery.waypoints.min.js"></script>
+<script src="../static/front/js/jquery.nice-select.min.js"></script>
+<script src="../static/front/js/jquery.scrollUp.min.js"></script>
+<script src="../static/front/js/imagesloaded.pkgd.min.js"></script>
+<script src="../static/front/js/jquery.magnific-popup.min.js"></script>
+<script src="../static/front/js/plugins.js"></script>
+<script src="../static/front/js/main.js"></script>
+</body>
+</html>
+
+
+

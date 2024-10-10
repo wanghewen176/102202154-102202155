@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>SchoolCommunityForums</Name>
+    <RootNamespace>SchoolCommunityForums</RootNamespace>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f50ab062-8141-45d4-a70b-17658bda6ade</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>SchoolCommunityForums.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\common\mydateTimeTool.py" />
+    <Compile Include="app\common\mysqlHelper.py" />
+    <Compile Include="app\dao\AdminsDao.py" />
+    <Compile Include="app\dao\CommunityforumscommentsDao.py" />
+    <Compile Include="app\dao\CommunityforumsDao.py" />
+    <Compile Include="app\dao\GoodscommentsDao.py" />
+    <Compile Include="app\dao\GoodsDao.py" />
+    <Compile Include="app\dao\SchoolnewcommentsDao.py" />
+    <Compile Include="app\dao\SchoolnewnameDao.py" />
+    <Compile Include="app\dao\UsersDao.py" />
+    <Compile Include="app\forms.py" />
+    <Compile Include="app\models.py" />
+    <Compile Include="app\model\Admins.py" />
+    <Compile Include="app\model\Communityforums.py" />
+    <Compile Include="app\model\Communityforumscomments.py" />
+    <Compile Include="app\model\Goods.py" />
+    <Compile Include="app\model\Goodscomments.py" />
+    <Compile Include="app\model\Schoolnewcomments.py" />
+    <Compile Include="app\model\Schoolnewname.py" />
+    <Compile Include="app\model\Users.py" />
+    <Compile Include="app\templatetags\__init__.py" />
+    <Compile Include="app\templatetags\custom_tags.py" />
+    <Compile Include="app\tests.py" />
+    <Compile Include="app\views.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="SchoolCommunityForums\__init__.py" />
+    <Compile Include="SchoolCommunityForums\settings.py" />
+    <Compile Include="SchoolCommunityForums\urls.py" />
+    <Compile Include="SchoolCommunityForums\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\migrations\" />
+    <Folder Include="app\migrations\__pycache__\" />
+    <Folder Include="app\model\" />
+    <Folder Include="app\common\" />
+    <Folder Include="app\dao\" />
+    <Folder Include="app\templatetags\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\admin\" />
+    <Folder Include="app\static\admin\css\" />
+    <Folder Include="app\static\admin\fonts\" />
+    <Folder Include="app\static\admin\images\" />
+    <Folder Include="app\static\admin\images\login\" />
+    <Folder Include="app\static\admin\js\" />
+    <Folder Include="app\static\app\" />
+    <Folder Include="app\static\app\content\" />
+    <Folder Include="app\static\app\fonts\" />
+    <Folder Include="app\static\app\scripts\" />
+    <Folder Include="app\static\front\" />
+    <Folder Include="app\static\front\css\" />
+    <Folder Include="app\static\front\fonts\" />
+    <Folder Include="app\static\front\img\" />
+    <Folder Include="app\static\front\img\bg\" />
+    <Folder Include="app\static\front\img\blog\" />
+    <Folder Include="app\static\front\img\icon\" />
+    <Folder Include="app\static\front\img\images\" />
+    <Folder Include="app\static\front\img\index\" />
+    <Folder Include="app\static\front\img\layout\" />
+    <Folder Include="app\static\front\img\logo\" />
+    <Folder Include="app\static\front\img\plugin\" />
+    <Folder Include="app\static\front\img\shape\" />
+    <Folder Include="app\static\front\img\slider\" />
+    <Folder Include="app\static\front\img\thumb\" />
+    <Folder Include="app\static\front\js\" />
+    <Folder Include="app\static\front\js\vendor\" />
+    <Folder Include="app\static\login\" />
+    <Folder Include="app\static\upload\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\templates\app\" />
+    <Folder Include="app\__pycache__\" />
+    <Folder Include="SchoolCommunityForums\" />
+    <Folder Include="SchoolCommunityForums\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\migrations\__pycache__\__init__.cpython-39.pyc" />
+    <Content Include="app\static\admin\css\admin_login.css" />
+    <Content Include="app\static\admin\css\common.css" />
+    <Content Include="app\static\admin\css\main.css" />
+    <Content Include="app\static\admin\fonts\icomoon.dev.svg" />
+    <Content Include="app\static\admin\fonts\icomoon.eot" />
+    <Content Include="app\static\admin\fonts\icomoon.svg" />
+    <Content Include="app\static\admin\fonts\icomoon.ttf" />
+    <Content Include="app\static\admin\fonts\icomoon.woff" />
+    <Content Include="app\static\admin\images\login\admin-login-btnbg.gif" />
+    <Content Include="app\static\admin\images\logo.png" />
+    <Content Include="app\static\admin\images\onCorrect.gif" />
+    <Content Include="app\static\admin\images\onError.gif" />
+    <Content Include="app\static\admin\images\onFocus.gif" />
+    <Content Include="app\static\admin\images\onShow.gif" />
+    <Content Include="app\static\admin\images\tab-thbg.png" />
+    <Content Include="app\static\front\css\animate.min.css" />
+    <Content Include="app\static\front\css\aos.css" />
+    <Content Include="app\static\front\css\bootstrap.min.css" />
+    <Content Include="app\static\front\css\default.css" />
+    <Content Include="app\static\front\css\flaticon.css" />
+    <Content Include="app\static\front\css\fontawesome-all.min.css" />
+    <Content Include="app\static\front\css\jquery-ui.min.css" />
+    <Content Include="app\static\front\css\magnific-popup.css" />
+    <Content Include="app\static\front\css\meanmenu.css" />
+    <Content Include="app\static\front\css\nice-select.css" />
+    <Content Include="app\static\front\css\responsive.css" />
+    <Content Include="app\static\front\css\slick.css" />
+    <Content Include="app\static\front\css\style.css" />
+    <Content Include="app\static\front\fonts\fa-brands-400.woff2" />
+    <Content Include="app\static\front\fonts\fa-regular-400.woff2" />
+    <Content Include="app\static\front\fonts\fa-solid-900.woff2" />
+    <Content Include="app\static\front\fonts\Flaticon.woff2" />
+    <Content Include="app\static\front\img\bg\top_head.jpeg" />
+    <Content Include="app\static\front\img\blog\avatar_img.png" />
+    <Content Include="app\static\front\img\blog\banner_add.jpg" />
+    <Content Include="app\static\front\img\blog\blog_thumb01.jpg" />
+    <Content Include="app\static\front\img\blog\blog_thumb02.jpg" />
+    <Content Include="app\static\front\img\blog\blog_thumb03.jpg" />
+    <Content Include="app\static\front\img\blog\comment_avatar01.jpg" />
+    <Content Include="app\static\front\img\blog\comment_avatar02.jpg" />
+    <Content Include="app\static\front\img\blog\comment_avatar03.jpg" />
+    <Content Include="app\static\front\img\blog\inner_blog_avatar01.png" />
+    <Content Include="app\static\front\img\blog\inner_blog_thumb01.jpg" />
+    <Content Include="app\static\front\img\blog\inner_blog_thumb02.jpg" />
+    <Content Include="app\static\front\img\blog\inner_blog_thumb03.jpg" />
+    <Content Include="app\static\front\img\blog\rc_post_thumb01.png" />
+    <Content Include="app\static\front\img\blog\rc_post_thumb02.png" />
+    <Content Include="app\static\front\img\blog\rc_post_thumb03.png" />
+    <Content Include="app\static\front\img\blog\sidebar_about.jpg" />
+    <Content Include="app\static\front\img\blog\s_blog_thumb01.jpg" />
+    <Content Include="app\static\front\img\blog\s_blog_thumb02.jpg" />
+    <Content Include="app\static\front\img\blog\s_blog_thumb03.jpg" />
+    <Content Include="app\static\front\img\icon\counter_icon01.png" />
+    <Content Include="app\static\front\img\icon\counter_icon02.png" />
+    <Content Include="app\static\front\img\icon\counter_icon03.png" />
+    <Content Include="app\static\front\img\icon\counter_icon04.png" />
+    <Content Include="app\static\front\img\icon\customize_icon01.png" />
+    <Content Include="app\static\front\img\icon\customize_icon02.png" />
+    <Content Include="app\static\front\img\icon\customize_icon03.png" />
+    <Content Include="app\static\front\img\icon\f_quote.png" />
+    <Content Include="app\static\front\img\icon\pricing_icon01.png" />
+    <Content Include="app\static\front\img\icon\pricing_icon02.png" />
+    <Content Include="app\static\front\img\icon\pricing_icon03.png" />
+    <Content Include="app\static\front\img\icon\quote.png" />
+    <Content Include="app\static\front\img\icon\quote_icon.png" />
+    <Content Include="app\static\front\img\icon\roket.png" />
+    <Content Include="app\static\front\img\icon\services_icon01.png" />
+    <Content Include="app\static\front\img\icon\services_icon02.png" />
+    <Content Include="app\static\front\img\icon\services_icon03.png" />
+    <Content Include="app\static\front\img\icon\services_icon04.png" />
+    <Content Include="app\static\front\img\icon\s_quote01.png" />
+    <Content Include="app\static\front\img\icon\s_quote02.png" />
+    <Content Include="app\static\front\img\images\404_img.png" />
+    <Content Include="app\static\front\img\images\card_img.png" />
+    <Content Include="app\static\front\img\images\customize_img.jpg" />
+    <Content Include="app\static\front\img\images\forums_author01.jpg" />
+    <Content Include="app\static\front\img\images\forums_author02.jpg" />
+    <Content Include="app\static\front\img\images\forums_author03.jpg" />
+    <Content Include="app\static\front\img\images\forums_author04.jpg" />
+    <Content Include="app\static\front\img\images\forums_author05.jpg" />
+    <Content Include="app\static\front\img\images\forums_author06.jpg" />
+    <Content Include="app\static\front\img\images\forums_author07.jpg" />
+    <Content Include="app\static\front\img\images\forums_author08.jpg" />
+    <Content Include="app\static\front\img\images\forums_author09.jpg" />
+    <Content Include="app\static\front\img\images\forums_author10.jpg" />
+    <Content Include="app\static\front\img\images\forums_author11.jpg" />
+    <Content Include="app\static\front\img\images\forums_author12.jpg" />
+    <Content Include="app\static\front\img\images\forums_author13.jpg" />
+    <Content Include="app\static\front\img\images\forums_author14.jpg" />
+    <Content Include="app\static\front\img\images\f_testi_img.png" />
+    <Content Include="app\static\front\img\images\f_testi_img02.png" />
+    <Content Include="app\static\front\img\images\knowledge_img01.jpg" />
+    <Content Include="app\static\front\img\images\knowledge_img02.jpg" />
+    <Content Include="app\static\front\img\images\newsletter_img.png" />
+    <Content Include="app\static\front\img\images\s_testi_avatar01.png" />
+    <Content Include="app\static\front\img\images\s_testi_avatar02.png" />
+    <Content Include="app\static\front\img\images\s_testi_avatar03.png" />
+    <Content Include="app\static\front\img\images\testi_avatar01.png" />
+    <Content Include="app\static\front\img\images\testi_avatar02.png" />
+    <Content Include="app\static\front\img\images\testi_avatar03.png" />
+    <Content Include="app\static\front\img\images\t_testimonial_img.jpg" />
+    <Content Include="app\static\front\img\images\t_testimonial_img02.jpg" />
+    <Content Include="app\static\front\img\index\index.jpeg" />
+    <Content Include="app\static\front\img\layout\vendor_product_thumb01.jpg" />
+    <Content Include="app\static\front\img\layout\vendor_product_thumb02.jpg" />
+    <Content Include="app\static\front\img\layout\vendor_product_thumb03.jpg" />
+    <Content Include="app\static\front\img\layout\vendor_profile_img.png" />
+    <Content Include="app\static\front\img\logo\logo_top.jpg" />
+    <Content Include="app\static\front\img\logo\logo_top.png" />
+    <Content Include="app\static\front\img\plugin\plugin01.jpg" />
+    <Content Include="app\static\front\img\plugin\plugin02.jpg" />
+    <Content Include="app\static\front\img\plugin\plugin03.jpg" />
+    <Content Include="app\static\front\img\plugin\plugin04.jpg" />
+    <Content Include="app\static\front\img\plugin\plugin05.jpg" />
+    <Content Include="app\static\front\img\plugin\plugin06.jpg" />
+    <Content Include="app\static\front\img\plugin\plugin07.jpg" />
+    <Content Include="app\static\front\img\plugin\plugin08.jpg" />
+    <Content Include="app\static\front\img\plugin\plugin09.jpg" />
+    <Content Include="app\static\front\img\plugin\plugin10.jpg" />
+    <Content Include="app\static\front\img\shape\customize_shape.png" />
+    <Content Include="app\static\front\img\shape\plugin_shape.png" />
+    <Content Include="app\static\front\img\shape\product_shape.png" />
+    <Content Include="app\static\front\img\slider\slider_bg01.jpg" />
+    <Content Include="app\static\front\img\slider\slider_bg02.jpg" />
+    <Content Include="app\static\front\img\slider\slider_bg03.jpg" />
+    <Content Include="app\static\front\img\slider\slider_dashboard01.jpg" />
+    <Content Include="app\static\front\img\slider\slider_img.png" />
+    <Content Include="app\static\front\img\thumb\product_thumb01.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb02.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb03.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb04.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb05.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb06.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb07.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb08.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb09.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb10.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb11.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb12.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb13.jpg" />
+    <Content Include="app\static\front\img\thumb\product_thumb14.jpg" />
+    <Content Include="app\static\front\js\ajax-form.js" />
+    <Content Include="app\static\front\js\aos.js" />
+    <Content Include="app\static\front\js\bootstrap.min.js" />
+    <Content Include="app\static\front\js\imagesloaded.pkgd.min.js" />
+    <Content Include="app\static\front\js\isotope.pkgd.min.js" />
+    <Content Include="app\static\front\js\jquery-ui.min.js" />
+    <Content Include="app\static\front\js\jquery.counterup.min.js" />
+    <Content Include="app\static\front\js\jquery.magnific-popup.min.js" />
+    <Content Include="app\static\front\js\jquery.meanmenu.min.js" />
+    <Content Include="app\static\front\js\jquery.nice-select.min.js" />
+    <Content Include="app\static\front\js\jquery.scrollUp.min.js" />
+    <Content Include="app\static\front\js\jquery.waypoints.min.js" />
+    <Content Include="app\static\front\js\main.js" />
+    <Content Include="app\static\front\js\plugins.js" />
+    <Content Include="app\static\front\js\popper.min.js" />
+    <Content Include="app\static\front\js\slick.min.js" />
+    <Content Include="app\static\front\js\vendor\jquery-1.12.4.min.js" />
+    <Content Include="app\static\front\js\wow.min.js" />
+    <Content Include="app\static\login\login.jpg" />
+    <Content Include="app\static\login\regsiter.jpeg" />
+    <Content Include="app\templates\app\adminUserEdit.html" />
+    <Content Include="app\templates\app\adminUserAdd.html" />
+    <Content Include="app\templates\app\adminUser.html" />
+    <Content Include="app\templates\app\adminSchoolNewEdit.html" />
+    <Content Include="app\templates\app\adminSchoolNewAdd.html" />
+    <Content Include="app\templates\app\adminSchoolNew.html" />
+    <Content Include="app\templates\app\admin.html" />
+    <Content Include="app\templates\app\communityForums.html" />
+    <Content Include="app\templates\app\communityForumsMyEdit.html" />
+    <Content Include="app\templates\app\goodsMyEdit.html" />
+    <Content Include="app\templates\app\goodsMyAdd.html" />
+    <Content Include="app\templates\app\communityForumsMyAdd.html" />
+    <Content Include="app\templates\app\layoutAdmin.html" />
+    <Content Include="app\templates\app\userInfo.html" />
+    <Content Include="app\templates\app\communityForumsDetail.html" />
+    <Content Include="app\templates\app\communityForumsMy.html" />
+    <Content Include="app\templates\app\goods.html" />
+    <Content Include="app\templates\app\goodsDetail.html" />
+    <Content Include="app\templates\app\goodsMy.html" />
+    <Content Include="app\templates\app\register.html" />
+    <Content Include="app\templates\app\schoolNew.html" />
+    <Content Include="app\templates\app\schoolNewDetail.html" />
+    <Content Include="app\__pycache__\views.cpython-39.pyc" />
+    <Content Include="app\__pycache__\__init__.cpython-39.pyc" />
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="app\static\app\content\bootstrap.css" />
+    <Content Include="app\static\app\content\bootstrap.min.css" />
+    <Content Include="app\static\app\content\site.css" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\static\app\scripts\bootstrap.js" />
+    <Content Include="app\static\app\scripts\bootstrap.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.map" />
+    <Content Include="app\static\app\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.min.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="app\static\app\scripts\modernizr-2.6.2.js" />
+    <Content Include="app\static\app\scripts\respond.js" />
+    <Content Include="app\static\app\scripts\respond.min.js" />
+    <Content Include="app\static\app\scripts\_references.js" />
+    <Content Include="app\templates\app\contact.html" />
+    <Content Include="app\templates\app\index.html" />
+    <Content Include="app\templates\app\layout.html" />
+    <Content Include="app\templates\app\login.html" />
+    <Content Include="SchoolCommunityForums\__pycache__\settings.cpython-39.pyc" />
+    <Content Include="SchoolCommunityForums\__pycache__\urls.cpython-39.pyc" />
+    <Content Include="SchoolCommunityForums\__pycache__\wsgi.cpython-39.pyc" />
+    <Content Include="SchoolCommunityForums\__pycache__\__init__.cpython-39.pyc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.html">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

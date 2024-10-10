@@ -1,0 +1,91 @@
+{% extends "app/layoutAdmin.html" %}
+
+{% block content %}
+
+
+<div class="result-wrap">
+    <div class="result-content">
+        <form action="/adminUserEdit" method="post" id="myform" name="myform" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <input id="Id" name="Id" size="50" value="{{users.Id}}" type="hidden">
+            <table class="insert-tab" width="100%">
+                <tbody>
+
+                    <tr>
+                        <th><i class="require-red">*</i>用户名：</th>
+                        <td>
+                            <input class="common-text required" id="title" name="UserName" size="50" readonly value="{{users.UserName}}" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><i class="require-red">*</i>密码：</th>
+                        <td>
+                            <input class="common-text" name="PWD" size="50" value="{{users.PWD}}" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><i class="require-red">*</i>姓名：</th>
+                        <td>
+                            <input class="common-text" name="Name" size="50" value="{{users.Name}}" type="text">
+                        </td>
+                    <tr>
+                        <th><i class="require-red">*</i>电话：</th>
+                        <td>
+                            <input class="common-text" name="Phone" size="50" value="{{users.Phone}}" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><i class="require-red">*</i>身份证：</th>
+                        <td>
+                            <input class="common-text" name="Card" size="50" value="{{users.Card}}" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><i class="require-red">*</i>班级：</th>
+                        <td>
+                            <input class="common-text" name="StudentClass" size="50" value="{{users.StudentClass}}" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><i class="require-red">*</i>地址：</th>
+                        <td>
+                            <input class="common-text" name="Address" size="50" value="{{users.Address}}" type="text">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th></th>
+                        <td>
+                            <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                            <input class="btn btn6" value="取消" type="reset">
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

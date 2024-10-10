@@ -1,0 +1,82 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+
+
+
+
+
+
+<div class="product-details-wrap" style="width:150%">
+    <div class="product-details-thumb">
+
+        <h1>项目资讯</h1>
+    </div>
+    <div class="product-details-tab">
+
+        <div class="tab-content product-tab-content" id="myTabContent">
+
+
+
+            <div class="tab-pane fade active show" id="product-reviews" role="tabpanel" aria-labelledby="product-reviews-tab">
+                <div class="item-comment-wrap">
+                    <div class="item-single-comment">
+                        <ul>
+
+                            {% load custom_tags %}
+
+                            {% for item in datas %}
+                            <li>
+                                <div class="item-comment-avatar">
+                                    {% with item.SchoolNewPath|splitone:";" as filePath %}
+                                    {% for path in filePath %}
+
+                                    <a href="/schoolNewDetail?id={{item.Id}}"><img style="height:150px;width:120px" src="/static/upload/{{path}}" alt="img"></a>
+
+                                    {% endfor %}
+                                    {% endwith %}
+                                </div>
+                                <div class="item-comment-content">
+                                    <h5><a href="/schoolNewDetail?id={{item.Id}}">{{item.SchoolNewName}}</a></h5>
+                                    <small>发布时间 : {{item.PublichTime}}</small>
+                                    <p>{{item.SchoolNewContent}}</p>
+                                </div>
+                            </li>
+                            {% endfor %}
+
+
+                        </ul>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

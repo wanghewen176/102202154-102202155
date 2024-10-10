@@ -1,0 +1,85 @@
+{% extends "app/layoutAdmin.html" %}
+
+{% block content %}
+
+
+<script type="text/javascript">
+        $(function () {
+            var temp = "{{alerts}}";
+            if (temp != "") {
+                alert("{{alerts}}");
+                //parent.window.location.href = "/adminStaff";
+            }
+
+        });
+</script>
+
+
+<div class="result-wrap">
+    <div class="result-content">
+        <form action="/adminSchoolNewAdd" method="post" id="myform" name="myform" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <table class="insert-tab" width="100%">
+                <tbody>
+
+                    <tr>
+                        <th><i class="require-red">*</i>资讯图片：</th>
+                        <td>
+
+                            <input class="common-text required" accept="image/*" multiple id="title" name="SchoolNewPath" size="50" value="" type="file">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>项目资讯标题：</th>
+                        <td><input class="common-text" name="SchoolNewName" size="50" type="text"></td>
+                    </tr>
+                    <tr>
+                        <th><i class="require-red">*</i>项目资讯内容：</th>
+                        <td>
+                            <textarea name="SchoolNewContent" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="20"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>发布时间：</th>
+                        <td><input class="common-text" name="PublichTime" size="50" type="datetime-local"></td>
+                    </tr>
+
+                    <tr>
+                        <th></th>
+                        <td>
+                            <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                            <input class="btn btn6" value="取消" type="reset">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

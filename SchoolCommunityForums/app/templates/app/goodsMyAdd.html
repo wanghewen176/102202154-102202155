@@ -1,0 +1,91 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+
+<script type="text/javascript">
+        $(function () {
+            var temp = "{{alerts}}";
+            if (temp != "") {
+                alert("{{alerts}}");
+                //parent.window.location.href = "/adminStaff";
+            }
+
+        });
+</script>
+
+<div class="product-details-wrap" style="width:150%">
+
+
+    <div class="col-lg-12 col-md-12">
+
+        <div class="blog-details-wrap">
+            <h1>项目添加</h1>
+
+            <div class="row">
+
+            <div class="comment-reply-box mt-75">
+                <form class="comment-form" action="/myGoodsAdd" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <div class="col-md-12">
+                        项目图片:
+                        <input type="file" accept="image/*" multiple style="width: 400% " name="GoodsPath" class="form-control">
+                    </div>
+                    <div class="col-md-12">
+                        项目标题：
+                        <input type="text" style="width: 400% " name="GoodsName" class="form-control" placeholder="项目标题">
+                    </div>
+                    <div class="col-md-12">
+                        项目利润：
+                        <input type="number" style="width: 400% " name="GoodsPrices" class="form-control" placeholder="项目利润">
+                    </div>
+                    <div class="col-md-12">
+                        项目描述：
+                        <textarea type="text" style="width: 400% " name="GoodsDetail" rows="20" placeholder="项目描述"></textarea>
+                    </div>
+
+                    <button class="btn">添加项目</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript">
+        $(function () {
+            var temp = "{{alerts}}";
+            if (temp != "") {
+                alert("{{alerts}}");
+                //parent.window.location.href = "/adminStaff";
+            }
+
+        });
+</script>
+
+<div class="product-details-wrap" style="width:150%">
+
+    <div class="col-lg-12 col-md-12">
+
+        <div class="blog-details-wrap">
+            <h1>项目中心</h1>
+
+            <div class="row">
+
+
+            <div class="comment-reply-box mt-75">
+                <form class="comment-form" action="/myGoodsEdit" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <input type="hidden" name="Id" value="{{goodss.Id}}" class="form-control">
+                    <input type="hidden" name="UsersId" value="{{goodss.UsersId}}" class="form-control">
+                    <input type="hidden" name="oldGoodsPath" value="{{goodss.GoodsPath}}" class="form-control">
+
+                    <div class="col-md-12">
+                        项目图片:
+                        <input type="file" accept="image/*" multiple style="width: 400% " name="GoodsPath" class="form-control">
+                    </div>
+                    <div class="col-md-12">
+                        项目标题：
+                        <input type="text" style="width: 400%" value="{{goodss.GoodsName}}" name="GoodsName" class="form-control" placeholder="日常标题">
+                    </div>
+                    <div class="col-md-12">
+                        项目价格：
+                        <input type="number" style="width: 400%" value="{{goodss.GoodsPrices}}" name="GoodsPrices" class="form-control" placeholder="日常标题">
+                    </div>
+                    <div class="col-md-12">
+                        发布时间：
+                        <input type="datetime-local" style="width: 400%" value="{{goodss.PublichTime}}" name="PublichTime " rows="20" />
+                    </div>
+                    <div class="col-md-12">
+                        项目描述：
+                        <textarea type="text" style="width: 400%" name="GoodsDetail" rows="20" placeholder="商品描述">{{goodss.GoodsDetail}}</textarea>
+                    </div>
+
+
+                    <button class="btn">编辑项目</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

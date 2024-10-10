@@ -1,0 +1,166 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="product-details-wrap" style="width:150%">
+
+
+
+
+
+
+
+    <div class="col-lg-12 col-md-12">
+
+
+        <div class="blog-details-wrap">
+            <h1>{{schoolnewnames.SchoolNewName}}</h1>
+            <div class="blog-thumb blog-details-thumb mb-30">
+
+                {% load custom_tags %}
+
+                {% with schoolnewnames.SchoolNewPath|splitone:";" as filePath %}
+                {% for path in filePath %}
+                <img style="height: 400px; width: 1206px;" src="/static/upload/{{path}}" alt="img">
+                {% endfor %}
+                {% endwith %}
+
+
+            </div>
+
+            <div class="row">
+
+                {% load custom_tags %}
+
+
+                {% with schoolnewnames.SchoolNewPath|splitlastthree:";" as filePath %}
+                {% for path in filePath %}
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-product t-single-product mb-30">
+                        <div class="product-img">
+
+                            <a href="#"><img style="height: 150px; width: 400px" src="/static/upload/{{path}}" alt="img"></a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                {% endfor %}
+                {% endwith %}
+
+
+            </div>
+
+            <div class="inner-blog-content blog-details-content mb-70">
+                <div class="blog-meta mb-20">
+                    <ul>
+                        <li><a href="#"><img src="../static/front/img/goods/avatar01.png" alt="img"> 发布者 Admin</a></li>
+                        <li><i class="far fa-calendar"></i> {{schoolnewnames.PublichTime}}</li>
+                        <li><i class="far fa-comments"></i>评价数量 ({{comments_count}})</li>
+                    </ul>
+                </div>
+                <p>
+
+                    校园资讯描述内容:
+
+                </p>
+                <p>
+
+                    {{schoolnewnames.SchoolNewContent}}
+
+                </p>
+
+            </div>
+
+
+            <div class="blog-comment mt-75">
+                <h4 class="b-details-inner-title">评价 / 留言信息</h4>
+                <ul>
+
+                    {% for item in goodscomments_list %}
+
+
+                    <li>
+                        <div class="single-comment">
+                            <div class="comment-avatar-img">
+                                <img src="../static/front/img/goods/comment_avatar01.jpg" alt="img">
+                            </div>
+                            <div class="comment-text">
+                                <div class="comment-avatar-info">
+                                    <h5>评价用户 ({{item.Users.UserName}})： <span class="comment-date">{{item.CommentsTime}}</span></h5>
+                                </div>
+                                <p>评价信息：{{item.CommentsContent}}</p>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+            <div class="comment-reply-box mt-75">
+                <form action="schoolNewDetailComments" method="post" class="comment-form">
+                    {% csrf_token %}
+
+                    <input type="hidden" name="SchoolNewId" value="{{schoolnewnames.Id}}" />
+                    <textarea name="CommentsContent" id="CommentsContent" placeholder="评价内容输入*"></textarea>
+                    <button class="btn">提交评价</button>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

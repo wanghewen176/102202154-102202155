@@ -1,0 +1,3 @@
+C:\Users\Roboter\source\repos\SchoolCommunityForums\SchoolCommunityForums\obj\Any CPU\Debug\SchoolCommunityForums.pyproj.CoreCompileInputs.cache
+E:\WorkSpace\ChinaStudentHomeWork\基于PythonDjango校园社交网络系统设计\SchoolCommunity\SchoolCommunityForums\obj\Any CPU\Debug\SchoolCommunityForums.pyproj.CoreCompileInputs.cache
+C:\Users\Robot\Desktop\基于PythonDjango校园社交网络系统设计\SchoolCommunity\SchoolCommunityForums\obj\Any CPU\Debug\SchoolCommunityForums.pyproj.CoreCompileInputs.cache

@@ -1,0 +1,112 @@
+﻿{% extends "app/layout.html" %}
+
+
+{% block content %}
+
+
+
+<div class="container">
+    <div class="t-product-wrap">
+        <div class="row">
+
+
+            <div class="col-lg-12">
+                <div class="forums-table-responsive">
+                    <a class="btn btn-primary" href="/myCommunityForumsAdd">添加帖子</a>
+                    <table style="max-width:130%;width:130%" class="table forums-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">用户</th>
+                                <th scope="col">帖子图片</th>
+                                <th scope="col">帖子标题</th>
+                                <th scope="col">帖子描述</th>
+                                <th scope="col">发布时间</th>
+                                <th scope="col">操作详情</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            {% load custom_tags %}
+
+                            {% for item in datas %}
+
+                            <tr>
+                                <td class="support-post-comment">{{item.UsersId}}</td>
+                                <td class="support-post-comment">
+                                    {% with item.path|split:";" as filePath %}
+                                    {% for path in filePath %}
+                                    <img src="/static/upload/{{path}}" style="width:50px;height:60px" />
+                                    {% endfor %}
+                                    {% endwith %}
+                                </td>
+                                <td class="support-post-comment">{{item.Title}}</td>
+                                <td class="support-post-comment">{{item.Content}}</td>
+                                <td class="support-post-time">
+                                    {{item.PublichTime}}
+                                </td>
+                                <td class="support-post-comment">
+                                    <a class="button" href="/myCommunityForumsEdit?id={{item.Id}}">编辑</a>
+                                    <a class="button" href="/myCommunityForumsDelete?id={{item.Id}}">删除</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+
+
+                        </tbody>
+                    </table>
+
+
+                    <!--<div class="forums-table-bottom">
+        <div class="row align-items-center">
+            <div class="col-6">
+                <div class="view-all-forums">
+                    <a href="#">显示总页数 <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="forums-pagination text-right">
+                    <ul>
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
